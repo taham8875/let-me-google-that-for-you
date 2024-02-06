@@ -2,9 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useState, useRef } from "react";
-
 import ShareLinkDialog from "@/components/share-link-dialog";
+
+import { useState, useRef } from "react";
 
 export function SearchForm() {
   const inputRef = useRef<HTMLInputElement>(null);

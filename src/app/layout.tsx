@@ -18,15 +18,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem={true}
-          storageKey="theme" // used to store the user's theme preference in the local storage
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <div className="container mx-auto">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem={true}
+            storageKey="theme" // used to store the user's theme preference in the local storage
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );

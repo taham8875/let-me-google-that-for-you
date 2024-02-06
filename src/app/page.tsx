@@ -1,10 +1,10 @@
 import React from "react";
-import ThemeToggler from "@/components/theme-toggler";
+import Header from "@/components/header";
 
 export default function page() {
   return (
     <div>
-      <ThemeToggler />
+      <Header />
     </div>
   );
 }

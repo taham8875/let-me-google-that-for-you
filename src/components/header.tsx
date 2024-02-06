@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import ThemeToggler from "./theme-toggler";
 import { Grip, User } from "lucide-react";

@@ -6,7 +6,7 @@ const linkClasses = "font-semibold underline";
 
 export default function Footer() {
   return (
-    <footer className="min-w-fill text-sm sm:flex sm:flex-row sm:items-center gap-2 p-6 flex flex-col text-center items-center absolute bottom-0">
+    <footer className="min-w-fill text-sm sm:flex sm:flex-row sm:items-center gap-2 p-6 flex flex-col text-center items-center">
       <Command />
       <p className="max-sm:max-w-80 ">
         Build by{" "}

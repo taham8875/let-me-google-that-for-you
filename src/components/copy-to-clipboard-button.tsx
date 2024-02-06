@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 export default function CopyToClipboardButton(props: any) {
   const [showSuccessCopy, setShowSuccessCopy] = useState(false);
 
+  const { textToCopy, ...rest } = props;
+
   useEffect(() => {
     if (showSuccessCopy) {
       const timeout = setTimeout(() => {
@@ -15,7 +17,7 @@ export default function CopyToClipboardButton(props: any) {
   }, [showSuccessCopy]);
   return (
     <Button
-      {...props}
+      {...rest}
       onClick={() => {
         navigator.clipboard.writeText(props.textToCopy);
         setShowSuccessCopy(true);

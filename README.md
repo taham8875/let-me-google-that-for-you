@@ -43,7 +43,13 @@ The purpose of *Let Me Google That For You* is to provide a humorous way to tell
 3. Copy the generated link and share it with someone who needs to learn how to Google.
 4. When the link is clicked, it will show the user how to search for the query on Google.
 
-TODO : Add a screencast of the app in action.
+# Demo
+
+
+
+https://github.com/taham8875/let-me-google-that-for-you/assets/92264237/15587335-9cb5-48de-abf6-eeab87650f3a
+
+
 
 # How to run this app
 
@@ -72,3 +78,7 @@ npm run dev
 - ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 Deployed on ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
+# Refactoring Plan
+
+This project requires extensive refactoring. My plan involves delving into the documentation for React and Next.js, thoroughly reviewing and understanding their intricacies. Once equipped with a deeper comprehension, I will return to this project to implement significant improvements and refactoring.

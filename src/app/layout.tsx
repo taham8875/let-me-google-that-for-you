@@ -23,7 +23,7 @@ export default function RootLayout({
             attribute="class"
             defaultTheme="system"
             enableSystem={true}
-            storageKey="theme" // used to store the user's theme preference in the local storage
+            storageKey="theme"
             disableTransitionOnChange
           >
             {children}

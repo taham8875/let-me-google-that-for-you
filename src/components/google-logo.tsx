@@ -70,11 +70,17 @@ function LightGoogleLogo() {
 
 export default function GoogleLogo() {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return (
+      <div className="animate-pulse">
+        <DarkGoogleLogo />
+      </div>
+    );
+  }
 
-  return theme === "dark" ? <DarkGoogleLogo /> : <LightGoogleLogo />;
+  return resolvedTheme === "dark" ? <DarkGoogleLogo /> : <LightGoogleLogo />;
 }

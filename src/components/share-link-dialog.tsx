@@ -20,12 +20,27 @@ type ShareLinkDialogProps = {
   searchQuery: string;
 };
 
+const env = process.env.NODE_ENV;
+
+const url =
+  env === "development"
+    ? "http://localhost:3000"
+    : "https://lmgtfy8.vercel.app";
+
 export default function ShareLinkDialog({
   isOpen,
   onOpenChange,
   searchQuery,
 }: ShareLinkDialogProps) {
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const [shareLink, setShareLink] = useState(`${url}/?q=${searchQuery}`);
+
+  useEffect(() => {
+    if (isOpen) {
+      setShareLink(`${url}/?q=${searchQuery}`);
+    }
+  }, [isOpen, searchQuery]);
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
@@ -40,7 +55,8 @@ export default function ShareLinkDialog({
             </Label>
             <Input
               id="link"
-              defaultValue={`https://lmgtfy8.vercel.app/?q=${searchQuery}`}
+              value={shareLink}
+              onChange={(e) => setShareLink(e.target.value)}
               ref={inputRef}
             />
           </div>
@@ -48,7 +64,7 @@ export default function ShareLinkDialog({
             type="submit"
             size="sm"
             className="px-3"
-            textToCopy={inputRef.current?.value || ""}
+            textToCopy={shareLink}
           />
         </div>
         <DialogFooter className="sm:justify-start">
